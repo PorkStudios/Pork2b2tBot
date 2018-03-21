@@ -203,25 +203,17 @@ public class TooBeeTooTeeBot {
                 	GetPlayerUUID getcID = new GetPlayerUUID();
                 	String playerUUID = getcID.getUuid(name);
                 	
-                	
-                	
                 	if(playerUUID=="Nonexistent Name" ) {
                 System.out.println("No user known as " + name +", pulling default skin!");
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/6ab4317889fd490597f60f67d9d76fd9?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);
                 
-                
-                	} else {
-                		
+                	} else {	
                  ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/"+ playerUUID +"?size=64&overlay&default=MHF_Steve"));	
                  System.out.println("Done!");
                  Caches.icon = ImageIO.read(inputStream);
                 	}
-                	
-                	
-                	
-                	
-                	
+  
                 } else {
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/" + protocol.profile.getId() + "?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);

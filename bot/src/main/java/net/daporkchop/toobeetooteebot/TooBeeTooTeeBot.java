@@ -34,6 +34,7 @@ import net.daporkchop.toobeetooteebot.server.PorkClient;
 import net.daporkchop.toobeetooteebot.util.Config;
 import net.daporkchop.toobeetooteebot.util.DataTag;
 import net.daporkchop.toobeetooteebot.util.HTTPUtils;
+import net.daporkchop.toobeetooteebot.util.GetPlayerUUID;
 import net.daporkchop.toobeetooteebot.web.*;
 
 import javax.imageio.ImageIO;
@@ -45,6 +46,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.io.IOException;
+import java.net.URL;
+
+import org.apache.commons.io.IOUtils;
+import org.json.*;
 
 public class TooBeeTooTeeBot {
     public static TooBeeTooTeeBot bot;
@@ -192,9 +198,33 @@ public class TooBeeTooTeeBot {
 
             if (Config.doServer) {
                 System.out.println("Getting server icon...");
+                if (protocol.profile.getId()==null) {
+                	String name = protocol.profile.getName();
+                	String playerUUID = GetPlayerUUID.getUuid(name);
+                	
+                	
+                	if(PlayerUUID=="Nonexistant Name" ) {
+                System.out.println("No user known as " + name +", pulling default skin!");
+                ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/6ab4317889fd490597f60f67d9d76fd9?size=64&overlay&default=MHF_Steve"));
+                Caches.icon = ImageIO.read(inputStream);
+                
+                
+                	} else {
+                		
+                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/"+ id +"?size=64&overlay&default=MHF_Steve"));	
+                 System.out.println("Done!");
+                 Caches.icon = ImageIO.read(inputStream);
+                	}
+                	
+                	
+                	
+                	
+                	
+                } else {
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/" + protocol.profile.getId() + "?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);
                 System.out.println("Done!");
+                }
             }
 
             if (Config.doGUI && GuiBot.INSTANCE == null) {

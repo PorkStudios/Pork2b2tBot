@@ -191,14 +191,7 @@ public class TooBeeTooTeeBot {
                 } else {
                     System.out.println("Logging in with cracked account, username: " + Config.username);
                     protocol = new MinecraftProtocol(Config.username);
-                    
-                 	String cname = protocol.profile.getName();
-                 	GetPlayerUUID getcID = new GetPlayerUUID();
-                 	String playerUUID = getcID.getUuid(cname);
-                 	if(playerUUID=="nouser") {
-                 		System.out.println(cname +"Is not an active username!")
-                 	} else {
-                    }
+                }
                 System.out.println("Success!");
                 System.out.println(protocol.getProfile().getIdAsString());
             }
@@ -206,12 +199,14 @@ public class TooBeeTooTeeBot {
             if (Config.doServer) {
                 System.out.println("Getting server icon...");
                 if (protocol.profile.getId()==null) {
-               
+                	String name = protocol.profile.getName();
+                	GetPlayerUUID getcID = new GetPlayerUUID();
+                	String playerUUID = getcID.getUuid(name);
                 	
                 	
                 	
                 	if(playerUUID=="Nonexistant Name" ) {
-                System.out.println("No user known as " + cname +", pulling default skin!");
+                System.out.println("No user known as " + name +", pulling default skin!");
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/6ab4317889fd490597f60f67d9d76fd9?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);
                 

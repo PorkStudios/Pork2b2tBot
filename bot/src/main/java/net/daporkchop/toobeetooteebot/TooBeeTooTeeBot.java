@@ -200,10 +200,12 @@ public class TooBeeTooTeeBot {
                 System.out.println("Getting server icon...");
                 if (protocol.profile.getId()==null) {
                 	String name = protocol.profile.getName();
-                	String playerUUID = GetPlayerUUID.getUuid(name);
+                	GetPlayerUUID getcID = new GetPlayerUUID();
+                	String playerUUID = getcID.getUuid(name);
                 	
                 	
-                	if(PlayerUUID=="Nonexistant Name" ) {
+                	
+                	if(playerUUID=="Nonexistant Name" ) {
                 System.out.println("No user known as " + name +", pulling default skin!");
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/6ab4317889fd490597f60f67d9d76fd9?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);
@@ -211,7 +213,7 @@ public class TooBeeTooTeeBot {
                 
                 	} else {
                 		
-                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/"+ id +"?size=64&overlay&default=MHF_Steve"));	
+                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/"+ playerUUID +"?size=64&overlay&default=MHF_Steve"));	
                  System.out.println("Done!");
                  Caches.icon = ImageIO.read(inputStream);
                 	}

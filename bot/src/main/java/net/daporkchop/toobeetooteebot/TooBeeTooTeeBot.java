@@ -205,7 +205,7 @@ public class TooBeeTooTeeBot {
                 	
                 	
                 	
-                	if(playerUUID=="Nonexistant Name" ) {
+                	if(playerUUID=="Nonexistent Name" ) {
                 System.out.println("No user known as " + name +", pulling default skin!");
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(HTTPUtils.downloadImage("https://crafatar.com/avatars/6ab4317889fd490597f60f67d9d76fd9?size=64&overlay&default=MHF_Steve"));
                 Caches.icon = ImageIO.read(inputStream);
@@ -257,6 +257,10 @@ public class TooBeeTooTeeBot {
             client = new Client(Config.ip, Config.port, protocol, new TcpSessionFactory());
             client.getSession().addListener(new PorkSessionListener(this));
             System.out.println("Connecting to " + Config.ip + ":" + Config.port + "...");
+            if(Config.username.length()>16) {
+            	System.out.println("You cannot have a username over 16 characters!");
+            	System.exit(4);
+            }
             client.getSession().connect(true);
         } catch (Exception e) {
             e.printStackTrace();

@@ -19,7 +19,7 @@ public class GetPlayerUUID {
         try {
             @SuppressWarnings("deprecation")
             String UUIDJson = IOUtils.toString(new URL(url));           
-            if(UUIDJson.isEmpty()) return "Nonexistant Name";                       
+            if(UUIDJson.isEmpty()) return "Nonexistent Name";                       
             JSONObject UUIDObject = (JSONObject) JSONValue.parseWithException(UUIDJson);
             return UUIDObject.get("id").toString();
         } catch (IOException e) {

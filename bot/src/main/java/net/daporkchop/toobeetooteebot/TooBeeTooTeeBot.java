@@ -257,7 +257,7 @@ public class TooBeeTooTeeBot {
             client = new Client(Config.ip, Config.port, protocol, new TcpSessionFactory());
             client.getSession().addListener(new PorkSessionListener(this));
             System.out.println("Connecting to " + Config.ip + ":" + Config.port + "...");
-            if(Config.username.length()>16) {
+            if(Config.username.length()>16 && !Config.doAuth) {
             	System.out.println("You cannot have a username over 16 characters!");
             	System.exit(4);
             }

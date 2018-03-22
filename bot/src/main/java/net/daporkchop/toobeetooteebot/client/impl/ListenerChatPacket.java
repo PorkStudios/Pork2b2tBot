@@ -81,7 +81,8 @@ public class ListenerChatPacket implements IPacketListener<ServerChatPacket> {
         while (iterator.hasNext()) {
             PorkClient client = iterator.next();
             if (((MinecraftProtocol) client.session.getPacketProtocol()).getSubProtocol() == SubProtocol.GAME) { //thx 0x kek
-                client.session.send(new ServerChatPacket(legacyColorCodes));
+                //client.session.send(new ServerChatPacket(legacyColorCodes));
+            	   //^ removed to stop double the messages from being sent to client
             }
         }
     }

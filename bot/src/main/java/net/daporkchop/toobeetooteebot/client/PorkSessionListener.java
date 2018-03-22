@@ -29,9 +29,11 @@ import com.github.steveice10.mc.protocol.data.status.ServerStatusInfo;
 import com.github.steveice10.mc.protocol.data.status.VersionInfo;
 import com.github.steveice10.mc.protocol.data.status.handler.ServerInfoBuilder;
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
+import com.github.steveice10.mc.protocol.packet.ingame.server.ServerChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerRotationPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.player.ClientPlayerSwingArmPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerJoinGamePacket;
+import com.github.steveice10.packetlib.event.session.PacketReceivedEvent;
 import com.github.steveice10.packetlib.Server;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.*;
@@ -71,11 +73,13 @@ public class PorkSessionListener implements SessionListener {
                 Iterator<PorkClient> iterator = bot.clients.iterator();
                 while (iterator.hasNext()) {
                     PorkClient client = iterator.next();
-                    if (((MinecraftProtocol) client.session.getPacketProtocol()).getSubProtocol() == SubProtocol.GAME) { //thx 0x kek
+                    if (packetReceivedEvent.getPacket() instanceof ServerChatPacket) {
+                    } else if (((MinecraftProtocol) client.session.getPacketProtocol()).getSubProtocol() == SubProtocol.GAME) { //thx 0x kek
                         client.session.send(packetReceivedEvent.getPacket());
                     }
+                    }
                 }
-            }
+            
         } catch (EntityNotFoundException e) {
             //xd xd xd
         } catch (ClassCastException e) {

@@ -181,13 +181,14 @@ public class PorkSessionAdapter extends SessionAdapter {
                             client.session.send(new ServerNotifyClientPacket(ClientNotification.CHANGE_GAMEMODE, Caches.gameMode));
                             return;
                         }*/
-
+                        /*
                         ServerChatPacket toSend = new ServerChatPacket(pck.getMessage(), MessageType.CHAT);
                         for (PorkClient client : bot.clients) {
                             if (((MinecraftProtocol) client.session.getPacketProtocol()).getSubProtocol() == SubProtocol.GAME) {
                                 client.session.send(toSend);
                             }
                         }
+                        */
                         return;
                     } else {
                         bot.client.getSession().send(event.getPacket());

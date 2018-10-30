@@ -1,0 +1,863 @@
+Summary for /www/javadecompilers/app/public/data/30.10.18/8f711fa60b02ef88922d6cdb8afc0b7a/maxbounce_v0.057P.jar
+Decompiled with CFR 0_132
+
+
+com.google.common.base.Utf8
+----------------------------
+
+isWellFormedSlowPath(byte[] int int )
+  Unable to fully structure code
+
+
+com.google.common.graph.EndpointPairIterator
+----------------------------
+
+computeNext()
+  Unable to fully structure code
+
+
+com.google.common.util.concurrent.AbstractFuture
+----------------------------
+
+removeWaiter(com.google.common.util.concurrent.AbstractFuture$Waiter )
+  Unable to fully structure code
+
+
+io.netty.handler.codec.ReplayingDecoder
+----------------------------
+
+callDecode(io.netty.channel.ChannelHandlerContext io.netty.buffer.ByteBuf java.util.List<java.lang.Object> )
+  Unable to fully structure code
+
+
+io.netty.handler.codec.stomp.StompSubframeDecoder
+----------------------------
+
+decode(io.netty.channel.ChannelHandlerContext io.netty.buffer.ByteBuf java.util.List<java.lang.Object> )
+  Unable to fully structure code
+
+
+io.netty.util.ThreadDeathWatcher
+----------------------------
+
+run()
+  Unable to fully structure code
+
+
+io.netty.util.concurrent.GlobalEventExecutor
+----------------------------
+
+run()
+  Unable to fully structure code
+
+
+io.netty.channel.kqueue.KQueueEventLoop
+----------------------------
+
+run()
+  Unable to fully structure code
+
+
+io.netty.handler.codec.compression.LzfDecoder
+----------------------------
+
+decode(io.netty.channel.ChannelHandlerContext io.netty.buffer.ByteBuf java.util.List<java.lang.Object> )
+  Unable to fully structure code
+
+
+io.netty.handler.codec.MessageToMessageEncoder
+----------------------------
+
+write(io.netty.channel.ChannelHandlerContext java.lang.Object io.netty.channel.ChannelPromise )
+  Unable to fully structure code
+
+
+io.netty.channel.epoll.EpollEventLoop
+----------------------------
+
+run()
+  Unable to fully structure code
+
+
+io.netty.handler.codec.ByteToMessageDecoder
+----------------------------
+
+channelRead(io.netty.channel.ChannelHandlerContext java.lang.Object )
+  Loose catch block
+
+
+io.netty.handler.codec.redis.RedisDecoder
+----------------------------
+
+decode(io.netty.channel.ChannelHandlerContext io.netty.buffer.ByteBuf java.util.List<java.lang.Object> )
+  Unable to fully structure code
+
+
+io.netty.channel.epoll.AbstractEpollServerChannel
+----------------------------
+
+epollInReady()
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [5[DOLOOP]], but top level block is 8[SIMPLE_IF_TAKEN]
+
+
+io.netty.handler.ssl.SslHandler
+----------------------------
+
+wrap(io.netty.channel.ChannelHandlerContext boolean )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [1[TRYBLOCK]], but top level block is 8[CASE]
+wrapNonAppData(io.netty.channel.ChannelHandlerContext boolean )
+  Unable to fully structure code
+
+
+io.netty.handler.ssl.ReferenceCountedOpenSslEngine
+----------------------------
+
+unwrap(java.nio.ByteBuffer[] int int java.nio.ByteBuffer[] int int )
+  Unable to fully structure code
+
+
+io.netty.handler.ssl.PemPrivateKey
+----------------------------
+
+toPEM(io.netty.buffer.ByteBufAllocator boolean java.security.PrivateKey )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [1[TRYBLOCK]], but top level block is 3[TRYBLOCK]
+
+
+io.netty.handler.codec.compression.SnappyFrameDecoder
+----------------------------
+
+decode(io.netty.channel.ChannelHandlerContext io.netty.buffer.ByteBuf java.util.List<java.lang.Object> )
+  Unable to fully structure code
+
+
+io.netty.util.internal.NativeLibraryLoader
+----------------------------
+
+load(java.lang.String java.lang.ClassLoader )
+  Loose catch block
+loadLibrary(java.lang.ClassLoader java.lang.String boolean )
+  Loose catch block
+
+
+io.netty.util.NetUtil
+----------------------------
+
+sysctlGetInt(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 5[CATCHBLOCK]
+
+
+gnu.crypto.cipher.BaseCipher
+----------------------------
+
+init(java.util.Map )
+  Exception : java.lang.IllegalStateException: Backjump on non jumping statement [] lbl7 : TryStatement: try { 0[TRYBLOCK]
+
+
+
+gnu.crypto.key.dss.FIPS186
+----------------------------
+
+generateParameters()
+  Unable to fully structure code
+
+
+gnu.crypto.mode.BaseMode
+----------------------------
+
+update(byte[] int byte[] int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: First case is not immediately after switch.
+init(java.util.Map )
+  Unable to fully structure code
+
+
+gnu.crypto.sasl.crammd5.PasswordFile
+----------------------------
+
+savePasswd()
+  Unable to fully structure code
+
+
+gnu.crypto.sasl.srp.PasswordFile
+----------------------------
+
+savePasswd()
+  Unable to fully structure code
+readOrCreateConf()
+  Unable to fully structure code
+
+
+gnu.crypto.util.Util
+----------------------------
+
+fromBase64(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [7[DOLOOP]], but top level block is 10[SIMPLE_IF_TAKEN]
+
+
+org.apache.commons.io.FileUtils
+----------------------------
+
+contentEquals(java.io.File java.io.File )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 4[TRYBLOCK]
+contentEqualsIgnoreEOL(java.io.File java.io.File java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 4[TRYBLOCK]
+waitFor(java.io.File int )
+  Loose catch block
+
+
+org.apache.commons.lang3.text.ExtendedMessageFormat
+----------------------------
+
+readArgumentIndex(java.lang.String java.text.ParsePosition )
+  Unable to fully structure code
+
+
+org.apache.commons.lang3.time.FastDatePrinter
+----------------------------
+
+appendFullDigits(java.lang.Appendable int int )
+  Unable to fully structure code
+
+
+org.java_websocket.server.WebSocketServer
+----------------------------
+
+run()
+  Loose catch block
+run()
+  Unable to fully structure code
+
+
+org.java_websocket.util.Base64
+----------------------------
+
+encodeBytesToBytes(byte[] int int int )
+  Unable to fully structure code
+decode(java.lang.String int )
+  Unable to fully structure code
+decodeFromFile(java.lang.String )
+  Unable to fully structure code
+encodeFromFile(java.lang.String )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2BooleanRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2ByteRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2CharRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2DoubleRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2FloatRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2IntRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2LongRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2ObjectRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2ReferenceRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.Byte2ShortRBTreeMap
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.bytes.ByteRBTreeSet
+----------------------------
+
+remove(byte )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2BooleanRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2ByteRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2CharRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2DoubleRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2FloatRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2IntRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2LongRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2ObjectRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2ReferenceRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.Char2ShortRBTreeMap
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.chars.CharRBTreeSet
+----------------------------
+
+remove(char )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2BooleanRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2ByteRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2CharRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2DoubleRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2FloatRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2IntRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2LongRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2ObjectRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2ReferenceRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.Double2ShortRBTreeMap
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.doubles.DoubleRBTreeSet
+----------------------------
+
+remove(double )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2BooleanRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2ByteRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2CharRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2DoubleRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2FloatRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2IntRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2LongRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2ObjectRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2ReferenceRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.Float2ShortRBTreeMap
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.floats.FloatRBTreeSet
+----------------------------
+
+remove(float )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2BooleanRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2ByteRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2CharRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2DoubleRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2FloatRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2IntRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2LongRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2ObjectRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2ReferenceRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.Int2ShortRBTreeMap
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.ints.IntRBTreeSet
+----------------------------
+
+remove(int )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.io.FastBufferedInputStream
+----------------------------
+
+readLine(byte[] int int java.util.EnumSet<it.unimi.dsi.fastutil.io.FastBufferedInputStream$LineTerminator> )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2BooleanRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2ByteRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2CharRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2DoubleRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2FloatRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2IntRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2LongRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2ObjectRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2ReferenceRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.Long2ShortRBTreeMap
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.longs.LongRBTreeSet
+----------------------------
+
+remove(long )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2BooleanRBTreeMap
+----------------------------
+
+removeBoolean(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2ByteRBTreeMap
+----------------------------
+
+removeByte(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2CharRBTreeMap
+----------------------------
+
+removeChar(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2DoubleRBTreeMap
+----------------------------
+
+removeDouble(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2FloatRBTreeMap
+----------------------------
+
+removeFloat(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2IntRBTreeMap
+----------------------------
+
+removeInt(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2LongRBTreeMap
+----------------------------
+
+removeLong(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2ObjectRBTreeMap
+----------------------------
+
+remove(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2ReferenceRBTreeMap
+----------------------------
+
+remove(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.Object2ShortRBTreeMap
+----------------------------
+
+removeShort(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.objects.ObjectRBTreeSet
+----------------------------
+
+remove(java.lang.Object )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2BooleanRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2ByteRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2CharRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2DoubleRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2FloatRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2IntRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2LongRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2ObjectRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2ReferenceRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.Short2ShortRBTreeMap
+----------------------------
+
+remove(short )
+  Unable to fully structure code
+
+
+it.unimi.dsi.fastutil.shorts.ShortRBTreeSet
+----------------------------
+
+remove(short )
+  Unable to fully structure code

@@ -48,7 +48,7 @@ public class EntityMetadataHandler implements HandlerRegistry.IncomingHandler<Se
                 }
                 entity.getMetadata().add(metadata);
             }
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityMetadataPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

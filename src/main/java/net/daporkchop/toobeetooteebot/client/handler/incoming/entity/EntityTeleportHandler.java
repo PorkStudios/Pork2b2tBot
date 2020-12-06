@@ -41,7 +41,7 @@ public class EntityTeleportHandler implements HandlerRegistry.IncomingHandler<Se
                     .setZ(packet.getZ())
                     .setYaw(packet.getYaw())
                     .setPitch(packet.getPitch());
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityTeleportPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

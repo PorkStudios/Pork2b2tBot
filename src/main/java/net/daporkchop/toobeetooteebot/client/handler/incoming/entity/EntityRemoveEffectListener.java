@@ -23,7 +23,6 @@ package net.daporkchop.toobeetooteebot.client.handler.incoming.entity;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.ServerEntityRemoveEffectPacket;
 import lombok.NonNull;
 import net.daporkchop.toobeetooteebot.client.PorkClientSession;
-import net.daporkchop.toobeetooteebot.util.cache.data.entity.Entity;
 import net.daporkchop.toobeetooteebot.util.cache.data.entity.EntityEquipment;
 import net.daporkchop.toobeetooteebot.util.cache.data.entity.PotionEffect;
 import net.daporkchop.toobeetooteebot.util.handler.HandlerRegistry;
@@ -47,11 +46,13 @@ public class EntityRemoveEffectListener implements HandlerRegistry.IncomingHandl
                         break;
                     }
                 }
-            } else {
+            } else if(CONFIG.log.sendWarning) {
                 CLIENT_LOG.warn("Received ServerEntityRemoveEffectPacket for invalid entity (id=%d)", packet.getEntityId());
             }
         } catch (ClassCastException e)  {
-            CLIENT_LOG.warn("Received ServerEntityRemoveEffectPacket for non-equipment entity (id=%d)", e, packet.getEntityId());
+            if(CONFIG.log.sendWarning) {
+                CLIENT_LOG.warn("Received ServerEntityRemoveEffectPacket for non-equipment entity (id=%d)", e, packet.getEntityId());
+            }
         }
         return true;
     }

@@ -20,7 +20,6 @@
 
 package net.daporkchop.toobeetooteebot.client.handler.incoming.entity;
 
-import com.github.steveice10.mc.protocol.packet.ingame.server.entity.ServerEntityPositionPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.ServerEntityRotationPacket;
 import lombok.NonNull;
 import net.daporkchop.toobeetooteebot.client.PorkClientSession;
@@ -39,7 +38,7 @@ public class EntityRotationHandler implements HandlerRegistry.IncomingHandler<Se
         if (entity != null) {
             entity.setYaw(packet.getYaw())
                     .setPitch(packet.getPitch());
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityRotationPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

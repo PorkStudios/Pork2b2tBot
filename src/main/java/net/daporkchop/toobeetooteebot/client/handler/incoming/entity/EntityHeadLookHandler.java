@@ -37,7 +37,7 @@ public class EntityHeadLookHandler implements HandlerRegistry.IncomingHandler<Se
         Entity entity = CACHE.getEntityCache().get(packet.getEntityId());
         if (entity != null) {
             entity.setHeadYaw(packet.getHeadYaw());
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityHeadLookPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

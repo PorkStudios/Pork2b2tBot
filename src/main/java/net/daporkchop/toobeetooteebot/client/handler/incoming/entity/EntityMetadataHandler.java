@@ -27,6 +27,8 @@ import net.daporkchop.toobeetooteebot.client.PorkClientSession;
 import net.daporkchop.toobeetooteebot.util.cache.data.entity.Entity;
 import net.daporkchop.toobeetooteebot.util.handler.HandlerRegistry;
 
+import java.util.ArrayList;
+
 import static net.daporkchop.toobeetooteebot.util.Constants.*;
 
 /**
@@ -46,7 +48,15 @@ public class EntityMetadataHandler implements HandlerRegistry.IncomingHandler<Se
                         continue MAINLOOP;
                     }
                 }
-                entity.getMetadata().add(metadata);
+
+                if(entity.getMetadata() instanceof ArrayList) {
+                    entity.getMetadata().add(metadata);
+                } else if(CONFIG.log.sendWarning) {
+                    // TODO make that info less
+                    CLIENT_LOG.warn("Received ServerEntityMetadataPacket for an entity that cant accept those (probably happened because you are on a 1.16 server. You can't see the sneaking of other players now eg)");
+
+                }
+
             }
         } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityMetadataPacket for invalid entity (id=%d)", packet.getEntityId());

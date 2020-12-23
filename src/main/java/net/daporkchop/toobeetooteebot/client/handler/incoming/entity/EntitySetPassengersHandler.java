@@ -28,7 +28,6 @@ import net.daporkchop.toobeetooteebot.util.handler.HandlerRegistry;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static net.daporkchop.toobeetooteebot.util.Constants.*;
 
@@ -41,7 +40,7 @@ public class EntitySetPassengersHandler implements HandlerRegistry.IncomingHandl
         Entity entity = CACHE.getEntityCache().get(packet.getEntityId());
         if (entity != null) {
             entity.setPassengerIds(Arrays.stream(packet.getPassengerIds()).boxed().collect(Collectors.toList()));
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntitySetPassengersPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

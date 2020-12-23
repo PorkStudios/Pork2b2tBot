@@ -78,7 +78,7 @@ public class ChunkCache implements CachedData, BiFunction<Column, Column, Column
 
     public void remove(int x, int z) {
         CACHE_LOG.debug("Server telling us to uncache chunk (%d, %d)", x, z);
-        if (this.cache.remove(new Vec2i(x, z)) == null) {
+        if (this.cache.remove(new Vec2i(x, z)) == null && CONFIG.log.sendWarning) {
             CACHE_LOG.warn("Could not remove column (%d, %d)! this is probably a server issue", x, z);
         }
     }

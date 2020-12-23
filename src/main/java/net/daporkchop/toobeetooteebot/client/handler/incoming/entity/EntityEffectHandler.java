@@ -45,11 +45,13 @@ public class EntityEffectHandler implements HandlerRegistry.IncomingHandler<Serv
                         packet.isAmbient(),
                         packet.getShowParticles()
                 ));
-            } else {
+            } else if(CONFIG.log.sendWarning) {
                 CLIENT_LOG.warn("Received ServerEntityEffectPacket for invalid entity (id=%d)", packet.getEntityId());
             }
         } catch (ClassCastException e)  {
-            CLIENT_LOG.warn("Received ServerEntityEffectPacket for non-equipment entity (id=%d)", e, packet.getEntityId());
+            if(CONFIG.log.sendWarning) {
+                CLIENT_LOG.warn("Received ServerEntityEffectPacket for non-equipment entity (id=%d)", e, packet.getEntityId());
+            }
         }
         return true;
     }

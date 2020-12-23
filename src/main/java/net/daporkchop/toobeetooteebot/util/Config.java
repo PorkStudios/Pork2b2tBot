@@ -125,6 +125,7 @@ public final class Config {
     public static final class Log {
         public boolean printDebug = false;
         public boolean storeDebug = true;
+        public boolean sendWarning = true;
     }
 
     public static final class Server {

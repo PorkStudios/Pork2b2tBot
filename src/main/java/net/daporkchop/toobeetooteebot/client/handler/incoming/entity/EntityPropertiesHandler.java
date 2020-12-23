@@ -37,7 +37,7 @@ public class EntityPropertiesHandler implements HandlerRegistry.IncomingHandler<
         Entity entity = CACHE.getEntityCache().get(packet.getEntityId());
         if (entity != null) {
             entity.setProperties(packet.getAttributes());
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityPropertiesPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

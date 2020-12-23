@@ -39,7 +39,7 @@ public class EntityPositionHandler implements HandlerRegistry.IncomingHandler<Se
             entity.setX(entity.getX() + packet.getMovementX())
                     .setY(entity.getY() + packet.getMovementY())
                     .setZ(entity.getZ() + packet.getMovementZ());
-        } else {
+        } else if(CONFIG.log.sendWarning){
             CLIENT_LOG.warn("Received ServerEntityPositionPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

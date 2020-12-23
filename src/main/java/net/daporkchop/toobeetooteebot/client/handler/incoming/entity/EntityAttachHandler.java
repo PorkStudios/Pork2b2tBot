@@ -41,7 +41,7 @@ public class EntityAttachHandler implements HandlerRegistry.IncomingHandler<Serv
             } else {
                 entity.setLeashed(true).setLeashedId(packet.getAttachedToId());
             }
-        } else {
+        } else if(CONFIG.log.sendWarning) {
             CLIENT_LOG.warn("Received ServerEntityAttachPacket for invalid entity (id=%d)", packet.getEntityId());
         }
         return true;

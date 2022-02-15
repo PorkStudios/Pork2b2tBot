@@ -59,7 +59,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "./gradlew build -x publish --no-daemon"
+                sh "./gradlew build"
             }
             post {
                 success {
@@ -68,21 +68,11 @@ pipeline {
                 }
             }
         }
-        stage("Publish") {
-            when {
-                anyOf {
-                    branch "master"
-                    branch "development"
-                }
-            }
-            steps {
-                sh "./gradlew publish -x publishToMavenLocal --no-daemon"
-            }
-        }
     }
 
     post {
         always {
+            sh "./gradlew --stop"
             deleteDir()
 
             withCredentials([string(credentialsId: "daporkchop_discord_webhook", variable: "discordWebhook")]) {
